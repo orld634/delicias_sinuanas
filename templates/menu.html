@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='style/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style/menu.css')}}">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button id="btnMenu" class="btn-hamburguesa">
+        <i class="bi bi-list fs-2"></i>
+    </button>
+
+    <!-- Overlay oscuro al abrir sidebar -->
+    <div id="overlay" class="overlay"></div>
+
+    <nav class="navbar dark bg-warning sidevar" id="sidebar">
+        <ul>
+            <p>menu delicias sinuanas</p>
+            <i class="bi bi-fork-knife fs-1"></i>
+            <a class="dropdown-item" href="{{url_for('desayunos')}}">desayunos</a>
+            <a class="dropdown-item" href="{{url_for('almuerzos')}}">almuerzos</a>
+            <a class="dropdown-item" href="#">Postres</a>
+            <a class="dropdown-item" href="#">Bebidas</a>
+            <a class="dropdown-item" href="#">Ensaladas</a>
+            <a class="dropdown-item" href="#">Sopas</a>
+            <a class="dropdown-item" href="#">Especiales de la casa</a>
+            <a class="dropdown-item" href="#">Promociones</a>
+            <a class="dropdown-item" href="#">Recomendaciones</a>
+        </ul>
+    </nav>
+
+    <div>
+        <img class="imagen3" src="{{url_for('static', filename='img/deliciassinuanas.png')}}">
+    </div>
+
+    <div class="section">
+        <section id="desayunos" class="row">
+
+            <div class="card">
+                <img src="{{url_for('static', filename='img/huevos-fritos.jpg')}}" alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Huevo Frito</h2>
+                    <p class="card-p">Huevo frito en aceite bien caliente, crocante por fuera y suave por dentro, acompañamiento clásico costeño.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static', filename='img/arepas.jpg')}}" alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Arepa de Maíz</h2>
+                    <p class="card-p">Tortilla de maíz molido asada o frita, base de la alimentación sinuana, suave y de sabor tradicional.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static', filename='img/carimanolas.jpeg')}}" alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Carimañola</h2>
+                    <p class="card-p">Masa de yuca rellena de carne molida o queso, frita hasta dorar, típico desayuno cordobés.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static', filename='img/bollos.jpg')}}" alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <h2 class="card-title">Bollo de Mazorca</h2>
+                    <p class="card-p">Preparado con maíz tierno rallado, envuelto en hoja de mazorca y cocinado al vapor, sabor dulce y suave.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{url_for('static', filename='img/empanadas.jpg')}}" alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Empanada de Pipián</h2>
+                    <p class="card-p">Masa de maíz rellena de papa con hogao y carne, frita, infaltable en las mañanas monterianas.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Mote de Queso</h2>
+                    <p class="card-p">Sopa espesa de ñame con queso costeño desmenuzado, plato emblemático de la gastronomía sinuana.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Sancocho de Sábalo</h2>
+                    <p class="card-p">Caldo contundente preparado con sábalo del río Sinú, ñame, yuca y plátano, orgullo de Montería.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Cabeza de Gato</h2>
+                    <p class="card-p">Plato típico de ñame machacado acompañado de suero costeño y queso, desayuno tradicional cordobés.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Viuda de Pescado</h2>
+                    <p class="card-p">Pescado de río cocinado con plátano, yuca y ñame en su propio vapor, receta ancestral sinuana.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." alt="...">
+                <div class="card-body">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                    <h2 class="card-title">Butifarra Costeña</h2>
+                    <p class="card-p">Embutido artesanal de cerdo condimentado con especias criollas, se sirve frita como pasabocas típico.</p>
+                    <a class="btn btn-warning">ordenar</a>
+                </div>
+            </div>
+
+        </section>
+        <br><br>
+
+        <div class="pie">
+            <footer class="d-flex justify-content-center">
+                <p>
+                    <img class="imagen1" src="{{url_for('static', filename='img/gmail.png')}}">
+                    correo: otroncoso@gmail.com
+                </p>
+                <p>
+                    <img class="imagen1" src="{{url_for('static', filename='img/whatsapp.png')}}">
+                    contactanos al: 3001160489
+                </p>
+                <p>
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal">nuestra direccion</a>
+                </p>
+            </footer>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63092.33721943631!2d-75.92316986383301!3d8.760546270242786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a2fe5a57031ad%3A0x92e1cbad2ed7c0a0!2zTW9udGVyw61hLCBDw7NyZG9iYQ!5e0!3m2!1ses-419!2sco!4v1778723481980!5m2!1ses-419!2sco"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+    <script>
+        const btnMenu = document.getElementById('btnMenu');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        btnMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

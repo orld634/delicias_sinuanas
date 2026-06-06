@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      <link rel="stylesheet" href="{{url_for('static', filename='style/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/registro.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="texto">
+       <h1>Registrate para ver nuestro panel exquisito</h1>
+    </div>
+    <div class="bandera">
+        <img src="{{url_for('static',filename='img/bandera.png')}}">
+     </div>
+    
+     <div class="card" >
+     <form class="d-flex justify-content-center"  method="POST">
+        <div class="card-body">
+        <label>nombre:</label>
+        <input type="text" class="form-control" name="nombre">
+        <br>
+        <label>apellido:</label>
+        <input type="text" class="form-control" name="apellido">
+        <br>
+        <label>fecha de nacimiento:</label>
+        <input type="date" class="form-control" name="fecha_nacimiento"> 
+        <br>
+        <label>email:</label>
+        <input type="email" class="form-control" name="email">
+        <br>
+        <label>pasword:</label>
+        <input type="text" class="form-control" name="pasword"> 
+        <br>
+        <a href="login.html">ya teienes una? entra aqui</a>
+        <br><br>
+        <button type="submit" class="btn btn-warning">enviar</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

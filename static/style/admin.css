@@ -1,0 +1,60 @@
+/* ── Body ──────────────────────────────────────────────── */
+body {
+    background-image: url(../img/admin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Card ───────────────────────────────────────────────── */
+.card {
+    width: min(23rem, 90vw);
+    margin: 1rem auto;
+    border-color: rgb(238, 241, 90);
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: transparent;
+}
+
+/* ── Ícono tools ────────────────────────────────────────── */
+.bi-tools {
+    color: aliceblue;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ── Formulario ─────────────────────────────────────────── */
+form label {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+form .btn-warning {
+    width: 100%;
+    border-radius: 20px !important;
+    margin: 0;
+}
+
+/* ── Desktop (≥768px) ───────────────────────────────────── */
+@media (min-width: 768px) {
+
+    .bi-tools {
+        position: fixed;
+        top: 6rem;
+        right: 4rem;
+        font-size: 5rem;
+        margin: 0;
+        text-align: left;
+    }
+
+    form .btn-warning {
+        width: auto;
+        margin-left: 8rem;
+    }
+}

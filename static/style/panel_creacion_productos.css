@@ -1,0 +1,113 @@
+/* ── Body ──────────────────────────────────────────────── */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/panel_creacion_productos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* ── Tipografía ─────────────────────────────────────────── */
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 27px;
+    color: gold;
+    text-align: center;
+}
+
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    color: brown;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* ── Sidebar nav ────────────────────────────────────────── */
+header nav {
+    width: 12rem;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+header nav.open {
+    transform: translateX(0);
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    background-color: green;
+    color: white;
+}
+
+/* ── Productos ──────────────────────────────────────────── */
+#productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    position: relative;
+}
+
+/* ── Input group ────────────────────────────────────────── */
+.input-group {
+    width: 100%;
+    max-width: 31rem;
+}
+
+/* ── Modal ──────────────────────────────────────────────── */
+.modal-header,
+.modal-body,
+.modal-footer {
+    background-color: chocolate;
+}
+
+.card-body {
+    background-color: gold;
+}
+
+/* ── Desktop (≥768px) ───────────────────────────────────── */
+@media (min-width: 768px) {
+
+    header nav {
+        transform: translateX(0);
+    }
+
+    h2 {
+        margin-left: 36rem;
+        text-align: left;
+    }
+
+    #productos {
+        flex-direction: row;
+        margin-top: 13rem;
+        margin-left: 35rem;
+        position: fixed;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    header nav a {
+        margin-bottom: 4rem;
+    }
+}

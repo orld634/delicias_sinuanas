@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <meta name="theme-color" content="#f4a800">
+     <link rel="stylesheet" href="{{url_for('static', filename='style/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename="style/login.css")}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="texto">
+       <h1>¿que esperas para probarlas?</h1>
+    </div>
+    <div class="bandera">
+        <img src="{{url_for('static', filename='img/bandera.png')}}">
+    
+     </div>
+     <div id="admin">
+    <a  href="{{url_for('admin')}}"><i class="bi bi-gear-fill fs-1"></i></a>
+    </div>
+
+   <div class="card">
+    <form class="d-flex justify-content-center" id="usuario"  method="POST">
+        <div class="card-body">
+        <label>email:</label>
+        <input type="text" class="form-control" name="email">
+        <br>
+        <label>pasword:</label>
+        <input type="text" class="form-control" name="pasword"> 
+        <br>
+        <a href="{{url_for('registro')}}">create una cuenta aqui</a>
+        <br><br>
+        <button type="submit"  class="btn btn-warning">iniciar sesion</button>
+        </div>
+    </form>
+    </div>
+   <script>
+    document.getElementById('admin').classList.add('ajuste')
+   </script>
+    <script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register(
+        "{{ url_for('static', filename='js/service-worker.js') }}"
+    );
+}
+</script>
+</body>
+</html>

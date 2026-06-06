@@ -1,0 +1,192 @@
+/* ── Body ──────────────────────────────────────────────── */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* ── Botón hamburguesa ──────────────────────────────────── */
+.btn-hamburguesa {
+    display: block; /* visible en móvil */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 8px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+/* ── Overlay ────────────────────────────────────────────── */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* ── Sidebar ────────────────────────────────────────────── */
+nav.sidevar {
+    width: 14rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    z-index: 1000;
+    display: block;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+nav.sidevar.open {
+    transform: translateX(0);
+}
+
+nav p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0 20px;
+}
+
+nav i {
+    margin-left: 20px;
+}
+
+nav ul {
+    margin-top: 14px;
+    padding-left: 0;
+}
+
+/* ── Dropdown items ─────────────────────────────────────── */
+ul .dropdown-item {
+    padding: 20px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ── Imagen destacada ───────────────────────────────────── */
+.imagen3 {
+    width: 90%;
+    margin: 1rem auto;
+    padding-top: 1rem;
+    display: block;
+    text-align: center;
+}
+
+/* ── Sección principal ──────────────────────────────────── */
+.section {
+    margin-left: 0;
+    padding: 1rem;
+    padding-bottom: 8rem;
+}
+
+/* ── Cards ──────────────────────────────────────────────── */
+section .card {
+    width: 100%;
+    padding: 10px;
+    margin: 16px auto;
+}
+
+section .card-p {
+    font-size: 14px;
+}
+
+section .card-title {
+    font-size: 17px;
+}
+
+section img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+/* ── Estrellas ──────────────────────────────────────────── */
+.bi-star-fill,
+.bi-star-half,
+.bi-star {
+    color: gold;
+}
+
+/* ── Iconos footer ──────────────────────────────────────── */
+.imagen1,
+.imagen2 {
+    width: 32px;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.pie {
+    background-color: chocolate;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 998;
+}
+
+footer p {
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: aliceblue;
+    margin-top: 32px;
+}
+
+/* ── Desktop (≥768px) ───────────────────────────────────── */
+@media (min-width: 768px) {
+
+    .btn-hamburguesa {
+        display: none; /* oculto en desktop */
+    }
+
+    nav.sidevar {
+        transform: translateX(0);
+    }
+
+    .section {
+        margin-left: 14rem;
+        padding: 2rem;
+        padding-bottom: 8rem;
+    }
+
+    section .card {
+        width: 18rem;
+        margin: 26px;
+        margin-left: 2rem;
+    }
+
+    .imagen3 {
+        margin-left: 41rem;
+        width: 25rem;
+        padding-top: 2rem;
+    }
+
+    nav i {
+        margin-left: 53px;
+    }
+
+    .pie {
+        width: calc(100% - 14rem);
+    }
+}

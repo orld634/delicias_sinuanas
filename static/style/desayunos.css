@@ -1,0 +1,160 @@
+/* ── Body ──────────────────────────────────────────────── */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* ── Sidebar ────────────────────────────────────────────── */
+nav.sidevar {
+    width: 14rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    z-index: 1000;
+    display: block;
+    transform: translateX(-100%); /* oculto por defecto en móvil */
+    transition: transform 0.3s ease;
+}
+
+nav.sidevar.open {
+    transform: translateX(0); /* visible cuando tiene clase .open */
+}
+
+nav p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0 20px;
+}
+
+nav i {
+    margin-left: 20px;
+}
+
+nav ul {
+    margin-top: 14px;
+    padding-left: 0;
+}
+
+/* ── Dropdown items ─────────────────────────────────────── */
+ul .dropdown-item {
+    padding: 20px;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ── Sección principal ──────────────────────────────────── */
+.section {
+    margin-left: 0;
+    padding: 1rem;
+    padding-bottom: 8rem;
+}
+
+/* ── Cards ──────────────────────────────────────────────── */
+section .card {
+    width: 100%;
+    padding: 10px;
+    margin: 16px auto;
+}
+
+section .card-p {
+    font-size: 14px;
+}
+
+section .card-title {
+    font-size: 17px;
+}
+
+section img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+/* ── Estrellas ──────────────────────────────────────────── */
+.bi-star-fill,
+.bi-star-half,
+.bi-star {
+    color: gold;
+}
+
+/* ── Imagen destacada ───────────────────────────────────── */
+.imagen3 {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+/* ── Iconos footer ──────────────────────────────────────── */
+.imagen1,
+.imagen2 {
+    width: 32px;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.pie {
+    background-color: chocolate;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+footer p {
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: aliceblue;
+    margin-top: 32px;
+}
+
+/* ── Tablet y desktop (≥768px) ──────────────────────────── */
+@media (min-width: 768px) {
+
+    nav.sidevar {
+        transform: translateX(0); /* siempre visible en tablet/desktop */
+    }
+
+    .section {
+        margin-left: 14rem;
+        padding: 2rem;
+        padding-bottom: 8rem;
+    }
+
+    section .card {
+        width: 18rem;
+        margin: 26px;
+        margin-left: 2rem;
+    }
+
+    .imagen3 {
+        margin-left: 39rem;
+        width: 31rem;
+        padding-top: 2rem;
+    }
+
+    nav i {
+        margin-left: 53px;
+    }
+
+    .pie {
+        width: calc(100% - 14rem);
+    }
+}

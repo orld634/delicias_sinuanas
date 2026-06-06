@@ -1,0 +1,85 @@
+/* ── Body ──────────────────────────────────────────────── */
+body {
+    background-image: url(../img/login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body a {
+    margin-left: 0;
+}
+
+/* ── Texto título ───────────────────────────────────────── */
+.texto {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(149, 66, 6, 0.933);
+    font-size: clamp(3rem, 10vw, 9rem); /* se achica en móvil */
+    text-align: center;
+    margin: 1rem 0 0 0;
+}
+
+/* ── Imagen ─────────────────────────────────────────────── */
+img {
+    width: clamp(6rem, 30vw, 12rem); /* se achica en móvil */
+    margin: 0 auto;
+    display: block;
+}
+
+/* ── Card ───────────────────────────────────────────────── */
+.card {
+    width: min(23rem, 90vw); /* máx 23rem, pero nunca más del 90% de pantalla */
+    margin: 1rem auto;
+    border-color: rgb(238, 241, 90);
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: rgba(234, 234, 15, 0.877);
+}
+
+.card .card-body {
+    background-image: url(../img/colombia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+/* ── Formulario ─────────────────────────────────────────── */
+form .form-control {
+    border-radius: 12px;
+}
+
+form label {
+    color: brown;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+form a {
+    text-decoration: none;
+    color: brown;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+}
+
+form .btn-warning {
+    width: 100%;
+    margin: 0;
+}
+
+/* ── Ícono ajuste ───────────────────────────────────────── */
+.bi-gear-fill {
+    color: rgb(248, 212, 10);
+}
+
+.ajuste {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
