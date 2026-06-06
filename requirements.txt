@@ -55,7 +55,6 @@ PyScreeze==1.0.1
 python-engineio==4.12.3
 python-socketio==5.14.3
 pytweening==1.2.0
-pywin32==311
 PyYAML==6.0.2
 regex==2025.9.1
 requests==2.32.5
