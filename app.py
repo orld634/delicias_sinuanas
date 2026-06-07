@@ -4,9 +4,21 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 app.secret_key = 'restaurante$2024#colombia*admin'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql10829596:xTuSmpJE7V@sql10.freesqldatabase.com/sql10829596'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///delicias.db'
 
 db = SQLAlchemy(app)
+
+class Usuario(db.Model):
+    __tablename__ = 'usuarios'
+    id = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(100), nullable=False)
+    apellido = db.Column(db.String(100), nullable=False)
+    fecha_nacimiento = db.Column(db.String(20), nullable=False)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    password = db.Column(db.String(100), nullable=False)
+
+with app.app_context():
+    db.create_all()
 
 @app.route('/menu')
 def menu():
